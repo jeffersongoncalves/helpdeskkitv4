@@ -111,9 +111,12 @@ class AppServiceProvider extends ServiceProvider
 
     private function configureSchema(): void
     {
+        Schemas\Components\Section::configureUsing(function (Schemas\Components\Section $section){
+            return $section->columns(['lg' => 2]);
+        });
         Schemas\Schema::configureUsing(function (Schemas\Schema $schema) {
             return $schema
-                ->columns(1)
+                ->columns(['lg' => 1])
                 ->defaultCurrency(config('filakit.defaultCurrency'))
                 ->defaultDateDisplayFormat(config('filakit.defaultDateDisplayFormat'))
                 ->defaultIsoDateDisplayFormat(config('filakit.defaultIsoDateDisplayFormat'))

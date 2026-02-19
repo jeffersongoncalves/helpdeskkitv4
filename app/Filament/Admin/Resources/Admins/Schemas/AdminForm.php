@@ -16,7 +16,6 @@ class AdminForm
         return $schema
             ->components([
                 Section::make()
-                    ->columns()
                     ->schema([
                         Toggle::make('status')
                             ->required()
