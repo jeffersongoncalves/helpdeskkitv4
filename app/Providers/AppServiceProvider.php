@@ -113,6 +113,7 @@ class AppServiceProvider extends ServiceProvider
     {
         Schemas\Schema::configureUsing(function (Schemas\Schema $schema) {
             return $schema
+                ->columns(1)
                 ->defaultCurrency(config('filakit.defaultCurrency'))
                 ->defaultDateDisplayFormat(config('filakit.defaultDateDisplayFormat'))
                 ->defaultIsoDateDisplayFormat(config('filakit.defaultIsoDateDisplayFormat'))
