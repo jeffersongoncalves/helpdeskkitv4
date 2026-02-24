@@ -111,7 +111,7 @@ class AppServiceProvider extends ServiceProvider
 
     private function configureSchema(): void
     {
-        Schemas\Components\Section::configureUsing(function (Schemas\Components\Section $section){
+        Schemas\Components\Section::configureUsing(function (Schemas\Components\Section $section) {
             return $section->columns(['lg' => 2]);
         });
         Schemas\Schema::configureUsing(function (Schemas\Schema $schema) {
