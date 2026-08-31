@@ -2648,16 +2648,16 @@
         },
         {
             "name": "jeffersongoncalves/laravel-help-desk",
-            "version": "v1.3.1",
+            "version": "v1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/laravel-help-desk.git",
-                "reference": "64e362625e4140e3ba2913b09c77ac3a6599d114"
+                "reference": "9aa31c48b02707ab5d38ec3c71cb4d7159506b94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/laravel-help-desk/zipball/64e362625e4140e3ba2913b09c77ac3a6599d114",
-                "reference": "64e362625e4140e3ba2913b09c77ac3a6599d114",
+                "url": "https://api.github.com/repos/jeffersongoncalves/laravel-help-desk/zipball/9aa31c48b02707ab5d38ec3c71cb4d7159506b94",
+                "reference": "9aa31c48b02707ab5d38ec3c71cb4d7159506b94",
                 "shasum": ""
             },
             "require": {
@@ -2666,13 +2666,14 @@
                 "illuminate/events": "^11.0|^12.0|^13.0",
                 "illuminate/notifications": "^11.0|^12.0|^13.0",
                 "illuminate/support": "^11.0|^12.0|^13.0",
+                "jeffersongoncalves/laravel-webhook-signatures": "^1.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
             "require-dev": {
                 "larastan/larastan": "^3.0",
                 "laravel/pint": "^1.21",
-                "orchestra/testbench": "^10.0|^11.0",
+                "orchestra/testbench": "^9.0|^10.0|^11.0",
                 "pestphp/pest": "^3.0|^4.0",
                 "pestphp/pest-plugin-laravel": "^3.0|^4.0"
             },
@@ -2692,7 +2693,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "JeffersonGoncalves\\HelpDesk\\": "src/"
+                    "JeffersonGoncalves\\HelpDesk\\": "src/",
+                    "JeffersonGoncalves\\HelpDesk\\Database\\Factories\\": "database/factories/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2717,7 +2719,7 @@
             ],
             "support": {
                 "issues": "https://github.com/jeffersongoncalves/laravel-help-desk/issues",
-                "source": "https://github.com/jeffersongoncalves/laravel-help-desk/tree/v1.3.1"
+                "source": "https://github.com/jeffersongoncalves/laravel-help-desk/tree/v1.3.2"
             },
             "funding": [
                 {
@@ -2725,7 +2727,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-23T16:59:53+00:00"
+            "time": "2026-08-31T12:36:58+00:00"
         },
         {
             "name": "jeffersongoncalves/laravel-pwa-favicon",
@@ -2795,6 +2797,82 @@
                 }
             ],
             "time": "2026-06-21T18:09:36+00:00"
+        },
+        {
+            "name": "jeffersongoncalves/laravel-webhook-signatures",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jeffersongoncalves/laravel-webhook-signatures.git",
+                "reference": "b8ecf3b9a30e0c2492ebad86f0cf738dc2a189dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jeffersongoncalves/laravel-webhook-signatures/zipball/b8ecf3b9a30e0c2492ebad86f0cf738dc2a189dd",
+                "reference": "b8ecf3b9a30e0c2492ebad86f0cf738dc2a189dd",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "illuminate/contracts": "^11.0|^12.0|^13.0",
+                "illuminate/http": "^11.0|^12.0|^13.0",
+                "illuminate/support": "^11.0|^12.0|^13.0",
+                "php": "^8.2|^8.3|^8.4",
+                "spatie/laravel-package-tools": "^1.14.0"
+            },
+            "require-dev": {
+                "larastan/larastan": "^3.0",
+                "laravel/pint": "^1.24",
+                "orchestra/testbench": "^9.0|^10.0|^11.0",
+                "pestphp/pest": "^3.7.4|^4.0",
+                "pestphp/pest-plugin-laravel": "^3.0|^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "WebhookSignatures": "JeffersonGoncalves\\WebhookSignatures\\Facades\\WebhookSignatures"
+                    },
+                    "providers": [
+                        "JeffersonGoncalves\\WebhookSignatures\\WebhookSignaturesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JeffersonGoncalves\\WebhookSignatures\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jefferson Gonçalves",
+                    "email": "gerson.simao.92@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Verificação centralizada e fail-closed de assinaturas de webhooks de provedores de email/serviços (Mailgun, SendGrid, Postmark, Resend e AWS SNS/SES) para aplicações Laravel.",
+            "homepage": "https://github.com/jeffersongoncalves/laravel-webhook-signatures",
+            "keywords": [
+                "SNS",
+                "jeffersongoncalves",
+                "laravel",
+                "laravel-webhook-signatures",
+                "mailgun",
+                "postmark",
+                "resend",
+                "sendgrid",
+                "signature",
+                "webhook"
+            ],
+            "support": {
+                "issues": "https://github.com/jeffersongoncalves/laravel-webhook-signatures/issues",
+                "source": "https://github.com/jeffersongoncalves/laravel-webhook-signatures/tree/1.1.0"
+            },
+            "time": "2026-06-23T11:24:24+00:00"
         },
         {
             "name": "jenssegers/agent",
@@ -13486,6 +13564,7 @@
     },
     "platform-dev": {},
     "platform-overrides": {
+        "php": "8.4.23",
         "ext-pcntl": "7.1",
         "ext-posix": "7.1"
     },
