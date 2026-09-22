@@ -28,6 +28,21 @@ updates:
       - dependency-name: filament/*
         versions:
           - '>=5.0'
+      - dependency-name: jeffersongoncalves/filament-additional-information
+        versions:
+          - '>=3.0'
+      - dependency-name: jeffersongoncalves/filament-help-desk
+        versions:
+          - '>=3.0'
+      - dependency-name: jeffersongoncalves/filament-logo
+        versions:
+          - '>=3.0'
+      - dependency-name: jeffersongoncalves/filament-pwa
+        versions:
+          - '>=3.0'
+      - dependency-name: jeffersongoncalves/filament-sensible-defaults
+        versions:
+          - '>=3.0'
     groups:
       composer-deps:
         patterns:
