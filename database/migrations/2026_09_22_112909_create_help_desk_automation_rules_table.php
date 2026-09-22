@@ -1,8 +1,8 @@
 <?php
 
-use JeffersonGoncalves\HelpDesk\Database\HelpDeskMigration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use JeffersonGoncalves\HelpDesk\Database\HelpDeskMigration;
 
 return new class extends HelpDeskMigration
 {
