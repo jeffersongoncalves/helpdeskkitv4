@@ -16,19 +16,19 @@
     "license": "MIT",
     "require": {
         "php": "^8.3",
-        "achyutn/filament-log-viewer": "^1.2",
+        "achyutn/filament-log-viewer": "^1.11",
         "dutchcodingcompany/filament-developer-logins": "^2.1",
-        "filament/filament": "^4.5",
+        "filament/filament": "^4.13",
         "jeffersongoncalves/filament-additional-information": "^2.0",
         "jeffersongoncalves/filament-help-desk": "^2.6",
         "jeffersongoncalves/filament-logo": "^2.1",
         "jeffersongoncalves/filament-pwa": "^2.1",
         "jeffersongoncalves/filament-sensible-defaults": "^2.1",
         "joaopaulolndev/filament-edit-profile": "^2.0",
-        "laravel/framework": "^13.0",
+        "laravel/framework": "^13.32",
         "laravel/tinker": "^3.0",
-        "livewire/livewire": "^3.7",
-        "wallacemartinss/filament-icon-picker": "^1.2"
+        "livewire/livewire": "^3.8",
+        "wallacemartinss/filament-icon-picker": "^1.4"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^4.0",
