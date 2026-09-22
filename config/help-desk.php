@@ -1,9 +1,127 @@
 <?php
 
-use App\Models\Operator;
 use App\Models\User;
 
 return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Driver
+    |--------------------------------------------------------------------------
+    |
+    | Where the help desk data lives, from this application's point of view.
+    |
+    | "database" reads and writes it directly, through the connection below.
+    |
+    | "api" reaches a central application over a signed HTTP API and holds no
+    | credentials for the support database at all. It serves the end-user side
+    | only: operator actions throw, naming what to use instead.
+    |
+    */
+
+    'driver' => env('HELPDESK_DRIVER', 'database'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Database Connection
+    |--------------------------------------------------------------------------
+    |
+    | The connection used by the help desk tables and migrations. Leave it null
+    | to use the application's default connection. Point it at another
+    | connection when several applications share one help desk database — for
+    | example when satellite apps only expose the end-user side and the tickets
+    | live in a central support database.
+    |
+    */
+
+    'connection' => env('HELPDESK_DB_CONNECTION'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Originating Application
+    |--------------------------------------------------------------------------
+    |
+    | Identifies this application on the tickets it creates, so a shared help
+    | desk database can tell them apart. Leave the key null in a single
+    | application installation.
+    |
+    | With "scope_to_app" enabled, this application only ever reads its own
+    | tickets. Leave it off in the central application that handles them all.
+    |
+    */
+
+    'app' => [
+        'key' => env('HELPDESK_APP_KEY'),
+        'name' => env('HELPDESK_APP_NAME'),
+    ],
+
+    'scope_to_app' => env('HELPDESK_SCOPE_TO_APP', false),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Signed API
+    |--------------------------------------------------------------------------
+    |
+    | Used when satellite applications reach the help desk over HTTP instead of
+    | a shared database connection.
+    |
+    | "tolerance" is how many seconds a request's timestamp may be away from
+    | now, in either direction. A nonce is also required and consumed once, so
+    | a captured request cannot simply be replayed inside that window.
+    |
+    | Each client is keyed by its app key — the same value tickets carry — and
+    | holds a list of secrets. Keep the current one first and the previous one
+    | second to rotate without a flag day: deploy the new secret, roll the
+    | satellites, then drop the old entry.
+    |
+    | The signature proves which application is calling. The acting user is
+    | asserted by that application, so a leaked secret can impersonate any user
+    | of that application and none of another.
+    |
+    */
+
+    'api' => [
+        /*
+        | The satellite half. Only the "api" driver reads these: the URL of the
+        | central application, and this application's own shared secret.
+        */
+        'url' => env('HELPDESK_API_URL'),
+        'secret' => env('HELPDESK_API_SECRET'),
+        'timeout' => env('HELPDESK_API_TIMEOUT', 10),
+
+        /*
+        | A file sent over the API travels base64 encoded inside the JSON body,
+        | so it grows by a third and is held in memory on both sides. This cap
+        | is therefore smaller than ticket.max_file_size, and deliberately so:
+        | it is the ceiling of the inline approach, not a policy about files.
+        | Larger attachments want a signed upload URL instead.
+        */
+        'max_inline_attachment' => env('HELPDESK_API_MAX_INLINE_ATTACHMENT', 2048), // KB
+
+        'prefix' => 'help-desk/api',
+
+        'middleware' => ['throttle:60,1'],
+
+        'tolerance' => env('HELPDESK_API_TOLERANCE', 300),
+
+        /*
+        | Each client also declares the actor types it may act as — the morph
+        | aliases its users are stored under. An application that claims an
+        | actor type it did not register is rejected, so a satellite cannot
+        | open a ticket that appears to come from another one.
+        |
+        | No clients means no API routes are registered at all.
+        */
+        'clients' => [
+            // 'app-a' => [
+            //     'secrets' => [
+            //         env('HELPDESK_SECRET_APP_A'),
+            //         env('HELPDESK_SECRET_APP_A_PREVIOUS'),
+            //     ],
+            //     'actor_types' => ['app-a-user'],
+            // ],
+        ],
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -18,7 +136,7 @@ return [
 
     'models' => [
         'user' => User::class,
-        'operator' => Operator::class,
+        'operator' => User::class,
     ],
 
     /*
@@ -109,7 +227,14 @@ return [
 
     'webhooks' => [
         'prefix' => 'help-desk/webhooks',
-        'middleware' => [],
+
+        /*
+        | Middleware applied to all inbound webhook routes. A throttle is
+        | enabled by default to mitigate abuse. Each webhook route also
+        | applies its own signature/credential verification middleware,
+        | which fails closed when the corresponding secret is not set.
+        */
+        'middleware' => ['throttle:60,1'],
     ],
 
     /*
@@ -130,6 +255,30 @@ return [
         ],
 
         'queue' => env('HELPDESK_NOTIFICATION_QUEUE', 'default'),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Feedback (CSAT) Settings
+    |--------------------------------------------------------------------------
+    |
+    | How many days after a ticket reaches a closed or resolved state a
+    | requester may still submit satisfaction feedback for it.
+    |
+    */
+
+    'feedback' => [
+        'window_days' => 14,
+
+        // Reopens a ticket automatically when the submitted rating is at or
+        // below the threshold. Off by default: this changes what happens
+        // after a customer submits feedback, and an existing install should
+        // not have its tickets start reopening themselves without opting in.
+        'auto_reopen' => [
+            'enabled' => false,
+            'rating_threshold' => 1,
+            'comment' => 'Ticket automatically reopened due to a low satisfaction rating.',
+        ],
     ],
 
     /*
