@@ -2307,21 +2307,21 @@
         },
         {
             "name": "jeffersongoncalves/filament-help-desk",
-            "version": "2.2.1",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-help-desk.git",
-                "reference": "4ba1be4459aefbdd36dc9758a266196508ca7c15"
+                "reference": "cbfad858f9748c9763d858b8c1eb4e6f5cd73042"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-help-desk/zipball/4ba1be4459aefbdd36dc9758a266196508ca7c15",
-                "reference": "4ba1be4459aefbdd36dc9758a266196508ca7c15",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-help-desk/zipball/cbfad858f9748c9763d858b8c1eb4e6f5cd73042",
+                "reference": "cbfad858f9748c9763d858b8c1eb4e6f5cd73042",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^4.8",
-                "jeffersongoncalves/laravel-help-desk": "^1.5",
+                "jeffersongoncalves/laravel-help-desk": "^1.12",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.16"
             },
@@ -2369,7 +2369,7 @@
             ],
             "support": {
                 "issues": "https://github.com/jeffersongoncalves/filament-help-desk/issues",
-                "source": "https://github.com/jeffersongoncalves/filament-help-desk/tree/2.2.1"
+                "source": "https://github.com/jeffersongoncalves/filament-help-desk/tree/2.6.0"
             },
             "funding": [
                 {
@@ -2381,7 +2381,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-16T22:08:39+00:00"
+            "time": "2026-09-21T20:02:01+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-logo",
@@ -2522,21 +2522,21 @@
         },
         {
             "name": "jeffersongoncalves/filament-pwa",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-pwa.git",
-                "reference": "30fa275d391b1ad14024886d15ea7fdaac5d2c65"
+                "reference": "0e3c15da9c616640f9520f25fe11971d4ce1f7f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-pwa/zipball/30fa275d391b1ad14024886d15ea7fdaac5d2c65",
-                "reference": "30fa275d391b1ad14024886d15ea7fdaac5d2c65",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-pwa/zipball/0e3c15da9c616640f9520f25fe11971d4ce1f7f0",
+                "reference": "0e3c15da9c616640f9520f25fe11971d4ce1f7f0",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^4.0",
-                "jeffersongoncalves/laravel-pwa-favicon": "^1.0.1",
+                "jeffersongoncalves/laravel-pwa-favicon": "^2.0",
                 "php": "^8.2|^8.3|^8.4",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
@@ -2583,22 +2583,22 @@
             ],
             "support": {
                 "issues": "https://github.com/jeffersongoncalves/filament-pwa/issues",
-                "source": "https://github.com/jeffersongoncalves/filament-pwa/tree/2.0.0"
+                "source": "https://github.com/jeffersongoncalves/filament-pwa/tree/2.1.0"
             },
-            "time": "2026-06-24T01:23:16+00:00"
+            "time": "2026-08-27T14:29:04+00:00"
         },
         {
             "name": "jeffersongoncalves/filament-sensible-defaults",
-            "version": "2.0.1",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/filament-sensible-defaults.git",
-                "reference": "31da149e8b1d2b3953f77da97d21a1bf30c83c9f"
+                "reference": "aa5ad4b59f83cfb403e34e6e34c92bb4f16b7599"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/filament-sensible-defaults/zipball/31da149e8b1d2b3953f77da97d21a1bf30c83c9f",
-                "reference": "31da149e8b1d2b3953f77da97d21a1bf30c83c9f",
+                "url": "https://api.github.com/repos/jeffersongoncalves/filament-sensible-defaults/zipball/aa5ad4b59f83cfb403e34e6e34c92bb4f16b7599",
+                "reference": "aa5ad4b59f83cfb403e34e6e34c92bb4f16b7599",
                 "shasum": ""
             },
             "require": {
@@ -2647,7 +2647,7 @@
             ],
             "support": {
                 "issues": "https://github.com/jeffersongoncalves/filament-sensible-defaults/issues",
-                "source": "https://github.com/jeffersongoncalves/filament-sensible-defaults/tree/2.0.1"
+                "source": "https://github.com/jeffersongoncalves/filament-sensible-defaults/tree/2.1.0"
             },
             "funding": [
                 {
@@ -2655,20 +2655,90 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-06-24T01:41:41+00:00"
+            "time": "2026-08-28T11:01:29+00:00"
         },
         {
-            "name": "jeffersongoncalves/laravel-help-desk",
-            "version": "v1.6.0",
+            "name": "jeffersongoncalves/laravel-favicon",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jeffersongoncalves/laravel-help-desk.git",
-                "reference": "930bcb9179e281330bdb0e8662a0177f9c46418c"
+                "url": "https://github.com/jeffersongoncalves/laravel-favicon.git",
+                "reference": "b27b6522bfdaf5bd40b6f3669dddefdf3c0345c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/laravel-help-desk/zipball/930bcb9179e281330bdb0e8662a0177f9c46418c",
-                "reference": "930bcb9179e281330bdb0e8662a0177f9c46418c",
+                "url": "https://api.github.com/repos/jeffersongoncalves/laravel-favicon/zipball/b27b6522bfdaf5bd40b6f3669dddefdf3c0345c6",
+                "reference": "b27b6522bfdaf5bd40b6f3669dddefdf3c0345c6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/routing": "^11.0|^12.0|^13.0",
+                "illuminate/support": "^11.0|^12.0|^13.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.14.0"
+            },
+            "require-dev": {
+                "larastan/larastan": "^3.0",
+                "laravel/pint": "^1.30",
+                "orchestra/testbench": "^9.0|^10.0|^11.0",
+                "pestphp/pest": "^3.7.4|^4.0",
+                "pestphp/pest-plugin-laravel": "^3.0|^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "JeffersonGoncalves\\Favicon\\FaviconServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JeffersonGoncalves\\Favicon\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jefferson Gonçalves",
+                    "email": "gerson.simao.92@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This Laravel package serves a favicon.ico route, a browserconfig.xml for Windows tiles, and Apple/PNG touch icon head links from config-driven, Vite-resolved icon assets.",
+            "homepage": "https://github.com/jeffersongoncalves/laravel-favicon",
+            "keywords": [
+                "jeffersongoncalves",
+                "laravel",
+                "laravel-favicon"
+            ],
+            "support": {
+                "issues": "https://github.com/jeffersongoncalves/laravel-favicon/issues",
+                "source": "https://github.com/jeffersongoncalves/laravel-favicon/tree/1.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/jeffersongoncalves",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-08-27T14:17:41+00:00"
+        },
+        {
+            "name": "jeffersongoncalves/laravel-help-desk",
+            "version": "v1.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jeffersongoncalves/laravel-help-desk.git",
+                "reference": "d3ad3a11595c079153875f12f14adaf9e5a04da5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jeffersongoncalves/laravel-help-desk/zipball/d3ad3a11595c079153875f12f14adaf9e5a04da5",
+                "reference": "d3ad3a11595c079153875f12f14adaf9e5a04da5",
                 "shasum": ""
             },
             "require": {
@@ -2730,7 +2800,7 @@
             ],
             "support": {
                 "issues": "https://github.com/jeffersongoncalves/laravel-help-desk/issues",
-                "source": "https://github.com/jeffersongoncalves/laravel-help-desk/tree/v1.6.0"
+                "source": "https://github.com/jeffersongoncalves/laravel-help-desk/tree/v1.12.0"
             },
             "funding": [
                 {
@@ -2742,25 +2812,26 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-16T22:52:31+00:00"
+            "time": "2026-09-21T17:10:20+00:00"
         },
         {
             "name": "jeffersongoncalves/laravel-pwa-favicon",
-            "version": "v1.0.1",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeffersongoncalves/laravel-pwa-favicon.git",
-                "reference": "7fdc46310129a46a0609db019b238589955a70e4"
+                "reference": "7cdff4a667f90644380d99d3b5488dd9463422bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeffersongoncalves/laravel-pwa-favicon/zipball/7fdc46310129a46a0609db019b238589955a70e4",
-                "reference": "7fdc46310129a46a0609db019b238589955a70e4",
+                "url": "https://api.github.com/repos/jeffersongoncalves/laravel-pwa-favicon/zipball/7cdff4a667f90644380d99d3b5488dd9463422bd",
+                "reference": "7cdff4a667f90644380d99d3b5488dd9463422bd",
                 "shasum": ""
             },
             "require": {
                 "illuminate/routing": "^11.0|^12.0|^13.0",
                 "illuminate/support": "^11.0|^12.0|^13.0",
+                "jeffersongoncalves/laravel-favicon": "^1.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.14.0"
             },
@@ -2794,7 +2865,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "This Laravel package serves a spec-shaped PWA `manifest.json` (with Android density icons, a 512px master icon, and a maskable variant), a `browserconfig.xml` for Windows tiles, a `favicon.ico` route, and Apple touch icon head links. It turns any Laravel application into an installable Progressive Web App with sensible, publishable defaults.",
+            "description": "This Laravel package serves a spec-shaped PWA `manifest.json` (with Android density icons, a 512px master icon, and a maskable variant) on top of jeffersongoncalves/laravel-favicon's favicon.ico, browserconfig.xml, and Apple touch icon head links. It turns any Laravel application into an installable Progressive Web App with sensible, publishable defaults.",
             "homepage": "https://github.com/jeffersongoncalves/laravel-pwa-favicon",
             "keywords": [
                 "jeffersongoncalves",
@@ -2803,7 +2874,7 @@
             ],
             "support": {
                 "issues": "https://github.com/jeffersongoncalves/laravel-pwa-favicon/issues",
-                "source": "https://github.com/jeffersongoncalves/laravel-pwa-favicon/tree/v1.0.1"
+                "source": "https://github.com/jeffersongoncalves/laravel-pwa-favicon/tree/v2.0.0"
             },
             "funding": [
                 {
@@ -2811,7 +2882,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-06-21T18:09:36+00:00"
+            "time": "2026-08-27T14:19:24+00:00"
         },
         {
             "name": "jeffersongoncalves/laravel-webhook-signatures",
