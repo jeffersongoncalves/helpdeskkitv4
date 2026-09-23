@@ -84,7 +84,7 @@ jobs:
         env:
           DB_CONNECTION: 'sqlite'
           DB_DATABASE: ':memory:'
-        run: vendor/bin/pest
+        run: vendor/bin/pest --no-coverage
 
       - name: Run tests (mysql)
         if: matrix.database == 'mysql'
@@ -95,7 +95,7 @@ jobs:
           DB_USERNAME: 'root'
           DB_PASSWORD: ''
           DB_DATABASE: 'testing'
-        run: vendor/bin/pest
+        run: vendor/bin/pest --no-coverage
 
       - name: Run tests (pgsql)
         if: matrix.database == 'pgsql'
@@ -106,4 +106,4 @@ jobs:
           DB_USERNAME: 'postgres'
           DB_PASSWORD: 'postgres'
           DB_DATABASE: 'testing'
-        run: vendor/bin/pest
+        run: vendor/bin/pest --no-coverage
