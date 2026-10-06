@@ -15,4 +15,4 @@ CHANGELOG.md export-ignore
 .styleci.yml export-ignore
 README.md export-ignore
 LICENSE.md export-ignore
-bun.lock export-ignore
+pnpm-lock.yaml export-ignore
