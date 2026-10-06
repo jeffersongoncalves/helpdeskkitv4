@@ -38,7 +38,7 @@ HelpDesk Kit is a robust starter kit built on Laravel 13.x and Filament 4.x, des
 
 - PHP 8.3 or higher
 - Composer
-- Node.js and Bun
+- Node.js and PNPM
 
 ## Installation
 
@@ -79,7 +79,7 @@ This command automates the installation process by:
 
 Install JavaScript dependencies
 ``` bash
-bun install
+pnpm install
 ```
 Install Composer dependencies
 ``` bash
@@ -99,7 +99,7 @@ php artisan migrate
 ```
 Build frontend assets
 ``` bash
-bun run build
+pnpm run build
 ```
 Run the server
 ``` bash
@@ -162,7 +162,7 @@ php artisan key:generate
 
 Install JavaScript dependencies
 ```bash
-bun install
+pnpm install
 ```
 
 ## Authentication Structure
@@ -215,7 +215,7 @@ composer dev
 # Or run each component separately
 php artisan serve
 php artisan queue:listen --tries=1
-bun run dev
+pnpm run dev
 ```
 
 ## Customization

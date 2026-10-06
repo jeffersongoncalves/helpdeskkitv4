@@ -48,7 +48,7 @@ updates:
         patterns:
           - '*'
 
-  - package-ecosystem: bun
+  - package-ecosystem: npm
     directory: /
     schedule:
       interval: weekly
@@ -59,6 +59,6 @@ updates:
         versions:
           - '>=5.0'
     groups:
-      bun-deps:
+      npm-deps:
         patterns:
           - '*'
