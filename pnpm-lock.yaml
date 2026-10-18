@@ -17,7 +17,7 @@ importers:
     devDependencies:
       '@tailwindcss/vite':
         specifier: ^4.3.3
-        version: 4.3.3(vite@8.3.2(jiti@2.7.0))
+        version: 4.3.3(vite@8.3.4(jiti@2.7.0))
       autoprefixer:
         specifier: ^10.5.6
         version: 10.6.1(postcss@8.5.29)
@@ -25,17 +25,17 @@ importers:
         specifier: ^1.20.0
         version: 1.20.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
       concurrently:
-        specifier: ^10.0.5
-        version: 10.0.5
+        specifier: ^10.0.6
+        version: 10.0.6
       laravel-vite-plugin:
         specifier: ^3.2.0
-        version: 3.2.0(vite@8.3.2(jiti@2.7.0))
+        version: 3.2.0(vite@8.3.4(jiti@2.7.0))
       tailwindcss:
         specifier: ^4.3.3
         version: 4.3.3
       vite:
-        specifier: ^8.3.0
-        version: 8.3.2(jiti@2.7.0)
+        specifier: ^8.3.4
+        version: 8.3.4(jiti@2.7.0)
 
 packages:
 
@@ -305,8 +305,8 @@ packages:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
 
-  concurrently@10.0.5:
-    resolution: {integrity: sha512-JaP/CoftUrCcAFW/g//RbgEGwlelnEae6cfBLgH6ZdO6s8jPkn6p9SB9u6pdVxYXoiSnFqseOlHfrEfF82TVOg==}
+  concurrently@10.0.6:
+    resolution: {integrity: sha512-qgICXXFp2/3nAebRLmxcINKEXM1mLK3ij/y31P02VTs/KIkddIeC05n73DxOXsXMB9LFSqNU1/na3lDlOhcbIw==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -700,8 +700,8 @@ packages:
   vite-plugin-full-reload@1.2.0:
     resolution: {integrity: sha512-kz18NW79x0IHbxRSHm0jttP4zoO9P9gXh+n6UTwlNKnviTTEpOlum6oS9SmecrTtSr+muHEn5TUuC75UovQzcA==}
 
-  vite@8.3.2:
-    resolution: {integrity: sha512-SQr1x6W5vVSbROg7vsyXIaxK9b0G7zsT68acdWWRmnBUsgDieLCRG+Rep9WdZgcposvv/GSnr4GUUBqB3vXq6w==}
+  vite@8.3.4:
+    resolution: {integrity: sha512-IftLE8phJhdNRIGNEV4JCCvfNScoZQVfcXaN8TQropWGJtOHcu+iAB9pHcuGvmEb/kddw0LBe/jS8ztdC6xdiQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -890,12 +890,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.3.3
       '@tailwindcss/oxide-win32-x64-msvc': 4.3.3
 
-  '@tailwindcss/vite@4.3.3(vite@8.3.2(jiti@2.7.0))':
+  '@tailwindcss/vite@4.3.3(vite@8.3.4(jiti@2.7.0))':
     dependencies:
       '@tailwindcss/node': 4.3.3
       '@tailwindcss/oxide': 4.3.3
       tailwindcss: 4.3.3
-      vite: 8.3.2(jiti@2.7.0)
+      vite: 8.3.4(jiti@2.7.0)
 
   agent-base@6.0.2(supports-color@10.2.2):
     dependencies:
@@ -957,7 +957,7 @@ snapshots:
     dependencies:
       delayed-stream: 1.0.0
 
-  concurrently@10.0.5:
+  concurrently@10.0.6:
     dependencies:
       chalk: 5.6.2
       rxjs: 7.8.2
@@ -1076,11 +1076,11 @@ snapshots:
 
   jiti@2.7.0: {}
 
-  laravel-vite-plugin@3.2.0(vite@8.3.2(jiti@2.7.0)):
+  laravel-vite-plugin@3.2.0(vite@8.3.4(jiti@2.7.0)):
     dependencies:
       picocolors: 1.1.1
       tinyglobby: 0.2.17
-      vite: 8.3.2(jiti@2.7.0)
+      vite: 8.3.4(jiti@2.7.0)
       vite-plugin-full-reload: 1.2.0
 
   lightningcss-android-arm64@1.32.0:
@@ -1280,7 +1280,7 @@ snapshots:
       picocolors: 1.1.1
       picomatch: 2.3.2
 
-  vite@8.3.2(jiti@2.7.0):
+  vite@8.3.4(jiti@2.7.0):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
