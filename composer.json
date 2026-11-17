@@ -21,7 +21,7 @@
         "filament/filament": "^4.13",
         "jeffersongoncalves/filament-additional-information": "^2.0",
         "jeffersongoncalves/filament-admin": "^2.0",
-        "jeffersongoncalves/filament-help-desk": "^2.9",
+        "jeffersongoncalves/filament-help-desk": "^2.10",
         "jeffersongoncalves/filament-logo": "^2.1",
         "jeffersongoncalves/filament-pwa": "^2.1",
         "jeffersongoncalves/filament-security-headers": "2.0",
